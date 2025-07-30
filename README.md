@@ -1,4 +1,4 @@
-# Project Title
+# Project Title 🚀
 
 Basic project description goes here.
 
