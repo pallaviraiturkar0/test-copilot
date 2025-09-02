@@ -1,37 +1,23 @@
-# Project Title 🚀
+# test-copilot
 
-Basic project description goes here.
+This is a placeholder README for the `test-copilot` repository.
 
-## Setup Instructions
+## Overview
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/pallaviraiturkar0/test-copilot.git
-   ```
+Describe your project here.
 
-2. Navigate to the project directory:
-   ```
-   cd test-copilot
-   ```
+## Installation
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+Instructions will go here.
 
-## Contribution Guidelines
+## Usage
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix:
-   ```
-   git checkout -b feature/YourFeature
-   ```
-3. Commit your changes:
-   ```
-   git commit -m "Add your message"
-   ```
-4. Push to the branch:
-   ```
-   git push origin feature/YourFeature
-   ```
-5. Create a pull request.
+Usage examples will be added soon.
+
+## Contributing
+
+Contribution guidelines will be added soon.
+
+## License
+
+Specify your license here.
