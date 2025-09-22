@@ -35,3 +35,7 @@ Basic project description goes here.
    git push origin feature/YourFeature
    ```
 5. Create a pull request.
+
+## Enhancements
+
+- [Enhancement Proposal #15](docs/enhancement-proposal-15.md) - [Issue #15](https://github.com/pallaviraiturkar0/test-copilot/issues/15)
