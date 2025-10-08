@@ -43,8 +43,8 @@ export class SecureProfileStorage {
       encrypted += String.fromCharCode(charCode ^ keyChar);
     }
     
-    // Base64 encode the result
-    return Buffer.from(encrypted).toString('base64');
+    // Base64 encode the result using btoa (available in React Native)
+    return btoa(encrypted);
   }
 
   /**
@@ -52,7 +52,8 @@ export class SecureProfileStorage {
    */
   private static async decrypt(encryptedData: string): Promise<string> {
     const key = await this.getEncryptionKey();
-    const encrypted = Buffer.from(encryptedData, 'base64').toString();
+    // Base64 decode using atob (available in React Native)
+    const encrypted = atob(encryptedData);
     let decrypted = '';
     
     for (let i = 0; i < encrypted.length; i++) {
