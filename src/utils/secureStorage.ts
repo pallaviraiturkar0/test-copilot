@@ -141,7 +141,7 @@ export class SecureProfileStorage {
       
       await this.saveProfile(updatedProfile);
     } catch (error) {
-      console.error('Error updating profile:', error);
+      // Don't log error details to avoid exposing sensitive information
       throw new Error('Failed to update profile');
     }
   }
