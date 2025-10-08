@@ -72,8 +72,10 @@ interface UserProfile {
 ### Encryption
 
 - **Storage**: Expo SecureStore (iOS Keychain / Android Keystore)
-- **Encryption Method**: XOR cipher with device-specific key
-- **Key Management**: Auto-generated on first use, stored securely
+- **Encryption Method**: Hardware-backed AES-256 encryption (OS-level)
+  - iOS: Uses Keychain Services with kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+  - Android: Uses EncryptedSharedPreferences with Android Keystore
+- **Integrity Verification**: SHA-256 hashing to detect data tampering
 
 ### Data Protection
 
