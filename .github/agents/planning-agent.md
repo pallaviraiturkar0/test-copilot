@@ -113,20 +113,3 @@ When the user is ready to move from planning to implementation, suggest:
 Always structure your PRD using clear markdown formatting with headers, bullet points, and code blocks where appropriate. Make it easy to scan and reference.
 
 Remember: Your job is to bridge the gap between a user's idea and a concrete implementation plan. Be thorough but practical.
-```
-
----
-
-## Example User Prompt to Test This System Prompt
-```
-I want to add a collaborative code review feature to our developer platform. 
-
-The basic idea is that when someone opens a PR, team members should be able to:
-- Leave inline comments on specific lines of code
-- Start threaded discussions
-- Suggest code changes that the author can accept with one click
-- See a summary of all unresolved comments
-
-We have about 50,000 active developers using the platform, and PRs average 200-300 lines of code. Our backend is Node.js with PostgreSQL, and the frontend is React.
-
-Can you help me plan this feature?
