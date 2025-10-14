@@ -1,6 +1,6 @@
 ---
-name:
-description:
+name: Planning Agent
+description: Helps developers created detailed, actionable project plans and PRDs
 ---
 
 # My Agent
