@@ -5,6 +5,17 @@ import { checkCollision, checkBoundary } from '../utils/collision';
 export const useGameLoop = (gameState, bird, setBird, pipes, setPipes, incrementScore, onGameOver) => {
   const requestRef = useRef();
   const lastTimeRef = useRef(0);
+  const birdRef = useRef(bird);
+  const pipesRef = useRef(pipes);
+
+  // Keep refs in sync with props
+  useEffect(() => {
+    birdRef.current = bird;
+  }, [bird]);
+
+  useEffect(() => {
+    pipesRef.current = pipes;
+  }, [pipes]);
 
   const gameLoop = useCallback((timestamp) => {
     if (!lastTimeRef.current) {
@@ -20,11 +31,25 @@ export const useGameLoop = (gameState, bird, setBird, pipes, setPipes, increment
           const newVelocity = prevBird.velocity + GRAVITY;
           const newY = prevBird.y + newVelocity;
           
-          return {
+          const updatedBird = {
             ...prevBird,
             y: newY,
             velocity: newVelocity
           };
+          
+          // Check collisions with current bird state
+          let collision = false;
+          pipesRef.current.forEach(pipe => {
+            if (checkCollision(updatedBird, pipe)) {
+              collision = true;
+            }
+          });
+
+          if (collision || checkBoundary(updatedBird, GAME_HEIGHT)) {
+            onGameOver();
+          }
+          
+          return updatedBird;
         });
 
         // Update pipes position and check for scoring
@@ -32,8 +57,8 @@ export const useGameLoop = (gameState, bird, setBird, pipes, setPipes, increment
           return prevPipes.map(pipe => {
             const newX = pipe.x - PIPE_SPEED;
             
-            // Check if bird passed the pipe
-            if (!pipe.passed && newX + pipe.width < bird.x) {
+            // Check if bird passed the pipe using current bird ref
+            if (!pipe.passed && newX + pipe.width < birdRef.current.x) {
               incrementScore();
               return { ...pipe, x: newX, passed: true };
             }
@@ -41,25 +66,13 @@ export const useGameLoop = (gameState, bird, setBird, pipes, setPipes, increment
             return { ...pipe, x: newX };
           }).filter(pipe => pipe.x > -pipe.width); // Remove pipes that are off screen
         });
-
-        // Check collisions
-        let collision = false;
-        pipes.forEach(pipe => {
-          if (checkCollision(bird, pipe)) {
-            collision = true;
-          }
-        });
-
-        if (collision || checkBoundary(bird, GAME_HEIGHT)) {
-          onGameOver();
-        }
       }
       
       lastTimeRef.current = timestamp;
     }
 
     requestRef.current = requestAnimationFrame(gameLoop);
-  }, [gameState, bird, pipes, setBird, setPipes, incrementScore, onGameOver]);
+  }, [gameState, setBird, setPipes, incrementScore, onGameOver]);
 
   useEffect(() => {
     if (gameState === 'PLAYING') {
