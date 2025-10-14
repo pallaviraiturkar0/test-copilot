@@ -37,15 +37,12 @@ export const useGameLoop = (gameState, bird, setBird, pipes, setPipes, increment
             velocity: newVelocity
           };
           
-          // Check collisions with current bird state
-          let collision = false;
-          pipesRef.current.forEach(pipe => {
-            if (checkCollision(updatedBird, pipe)) {
-              collision = true;
-            }
-          });
+          // Check collisions with current bird state (using some for early exit)
+          const hasCollision = pipesRef.current.some(pipe => 
+            checkCollision(updatedBird, pipe)
+          );
 
-          if (collision || checkBoundary(updatedBird, GAME_HEIGHT)) {
+          if (hasCollision || checkBoundary(updatedBird, GAME_HEIGHT)) {
             onGameOver();
           }
           
