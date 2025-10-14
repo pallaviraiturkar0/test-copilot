@@ -42,6 +42,20 @@ This repository contains comprehensive planning documents for building the game:
 
 ## 🚀 Quick Start
 
+### Playing the Implemented Game
+
+The game has been fully implemented and is ready to play!
+
+```bash
+cd flappy-bird-game
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 in your browser.
+
+### Planning Documentation
+
 See [QUICK_START.md](./QUICK_START.md) for rapid setup instructions, or [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md) for the complete step-by-step guide.
 
 ## Setup Instructions
