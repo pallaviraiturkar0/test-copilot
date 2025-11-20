@@ -2,6 +2,19 @@
 
 Basic project description goes here.
 
+## 📚 How This Repo Works
+
+Want to learn more about this repository? Check out our detailed guide! 🎉
+
+👉 **[Read the Repository Guide with Emojis](REPO-GUIDE-EMOJI.md)** 🌟
+
+This comprehensive guide covers everything you need to know about:
+- 🎯 What this repo is for
+- 🏗️ How the code is structured
+- ⚙️ Setting up locally
+- 🎮 Running the scripts
+- 🤝 Contributing to the project
+
 ## Setup Instructions
 
 1. Clone the repository:
