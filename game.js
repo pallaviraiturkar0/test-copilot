@@ -11,6 +11,7 @@ const PIPE_GAP = 150;
 const PIPE_WIDTH = 60;
 const PIPE_SPAWN_INTERVAL = 1500;
 const BIRD_SIZE = 30;
+const GROUND_HEIGHT = 80;
 
 // Game state
 let canvas, ctx;
@@ -257,7 +258,7 @@ function update(deltaTime, currentTime) {
  */
 function spawnPipe() {
     const minHeight = 50;
-    const maxHeight = canvas.logicalHeight - PIPE_GAP - minHeight - 100; // 100 for ground
+    const maxHeight = canvas.logicalHeight - PIPE_GAP - minHeight - GROUND_HEIGHT - 20;
     const topHeight = Math.random() * (maxHeight - minHeight) + minHeight;
     
     pipes.push({
@@ -279,7 +280,7 @@ function checkCollision() {
     };
     
     // Ground collision
-    if (bird.y + BIRD_SIZE / 2 > canvas.logicalHeight - 80) {
+    if (bird.y + BIRD_SIZE / 2 > canvas.logicalHeight - GROUND_HEIGHT) {
         return true;
     }
     
@@ -416,7 +417,7 @@ function drawPipes() {
         
         // Bottom pipe
         const bottomY = pipe.topHeight + PIPE_GAP;
-        const bottomHeight = canvas.logicalHeight - bottomY - 80; // Account for ground
+        const bottomHeight = canvas.logicalHeight - bottomY - GROUND_HEIGHT;
         drawPipe(pipe.x, bottomY, PIPE_WIDTH, bottomHeight, false, pipeColor, pipeDarkColor, pipeHighlight);
     });
 }
@@ -458,12 +459,11 @@ function drawPipe(x, y, width, height, isTop, color, darkColor, highlight) {
  * Draw the ground
  */
 function drawGround() {
-    const groundHeight = 80;
-    const y = canvas.logicalHeight - groundHeight;
+    const y = canvas.logicalHeight - GROUND_HEIGHT;
     
     // Ground base
     ctx.fillStyle = '#ded895';
-    ctx.fillRect(0, y, canvas.logicalWidth, groundHeight);
+    ctx.fillRect(0, y, canvas.logicalWidth, GROUND_HEIGHT);
     
     // Grass top
     ctx.fillStyle = '#5cb85c';
@@ -604,19 +604,58 @@ function shareScore() {
 }
 
 /**
- * Copy text to clipboard
+ * Copy text to clipboard with fallback
  */
 function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        // Show feedback
-        const originalText = shareBtn.textContent;
-        shareBtn.textContent = 'Copied!';
-        setTimeout(() => {
-            shareBtn.textContent = originalText;
-        }, 2000);
-    }).catch(() => {
-        alert('Could not copy score. Your score was: ' + score);
-    });
+    // Try modern clipboard API first
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showShareFeedback('Copied!');
+        }).catch(() => {
+            // Fallback for older browsers or non-HTTPS
+            fallbackCopyToClipboard(text);
+        });
+    } else {
+        fallbackCopyToClipboard(text);
+    }
+}
+
+/**
+ * Fallback clipboard copy using execCommand
+ */
+function fallbackCopyToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    textArea.style.top = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showShareFeedback('Copied!');
+        } else {
+            showShareFeedback('Score: ' + score);
+        }
+    } catch (err) {
+        showShareFeedback('Score: ' + score);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+/**
+ * Show feedback on the share button
+ */
+function showShareFeedback(message) {
+    const originalText = shareBtn.textContent;
+    shareBtn.textContent = message;
+    setTimeout(() => {
+        shareBtn.textContent = originalText;
+    }, 2000);
 }
 
 // Initialize game when DOM is ready
