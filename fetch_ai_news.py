@@ -5,7 +5,6 @@ This script retrieves and displays the latest news about artificial intelligence
 """
 
 import sys
-import urllib.request
 import json
 from datetime import datetime
 
