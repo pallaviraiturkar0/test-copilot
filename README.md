@@ -2,6 +2,17 @@
 
 Basic project description goes here.
 
+## George Washington's Birthday
+
+**Answer: February 22, 1732**
+
+To get detailed information about George Washington's birthday, run:
+```bash
+python george_washington_birthday.py
+```
+
+Note: The birthday is celebrated on February 22 according to the Gregorian (New Style) calendar. Under the Julian (Old Style) calendar in use at the time of his birth, the date was February 11, 1731/32.
+
 ## Setup Instructions
 
 1. Clone the repository:
