@@ -47,8 +47,10 @@ A small sandbox repository with simple Python scripts and markdown files for exp
 3. Make your changes and commit:
 
    ```bash
-   git add hello.py
+   git add <your-changed-files>
    git commit -m "Describe your change"
    ```
+
+   Replace `<your-changed-files>` with the files you actually modified (for example, `git add hello.py`).
 
 4. Push your branch and open a pull request.
