@@ -47,7 +47,7 @@ A small sandbox repository with simple Python scripts and markdown files for exp
 3. Make your changes and commit:
 
    ```bash
-   git add <files>
+   git add path/to/file.py
    git commit -m "Describe your change"
    ```
 
