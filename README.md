@@ -10,7 +10,6 @@ A small sandbox repository with simple Python scripts and markdown files for exp
   - `foo.py`
   - `sort_descending.py`
 - Documentation/notes:
-  - `README.md`
   - `architecture.md`
   - `a.md`, `b.md`, `c.md`
   - `docs/`
@@ -48,7 +47,7 @@ A small sandbox repository with simple Python scripts and markdown files for exp
 3. Make your changes and commit:
 
    ```bash
-   git add .
+   git add <files>
    git commit -m "Describe your change"
    ```
 
