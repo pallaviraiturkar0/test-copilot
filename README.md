@@ -1,37 +1,55 @@
-# Project Title 🚀
+# Test Copilot Repository 🚀
 
-Basic project description goes here.
+A small sandbox repository with simple Python scripts and markdown files for experimentation and practice.
 
-## Setup Instructions
+## 📂 What’s in this repository
+
+- Python examples:
+  - `hello.py`
+  - `intro.py`
+  - `foo.py`
+  - `sort_descending.py`
+- Documentation/notes:
+  - `README.md`
+  - `architecture.md`
+  - `a.md`, `b.md`, `c.md`
+  - `docs/`
+
+## ⚙️ Getting Started
 
 1. Clone the repository:
-   ```
+
+   ```bash
    git clone https://github.com/pallaviraiturkar0/test-copilot.git
    ```
 
-2. Navigate to the project directory:
-   ```
+2. Move into the project directory:
+
+   ```bash
    cd test-copilot
    ```
 
-3. Install the dependencies:
-   ```
-   npm install
+3. Run any script directly with Python:
+
+   ```bash
+   python hello.py
+   python foo.py
    ```
 
-## Contribution Guidelines
+## 🤝 Contribution Guidelines
 
 1. Fork the repository.
-2. Create a new branch for your feature or fix:
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/your-feature-name
    ```
-   git checkout -b feature/YourFeature
+
+3. Make your changes and commit:
+
+   ```bash
+   git add .
+   git commit -m "Describe your change"
    ```
-3. Commit your changes:
-   ```
-   git commit -m "Add your message"
-   ```
-4. Push to the branch:
-   ```
-   git push origin feature/YourFeature
-   ```
-5. Create a pull request.
+
+4. Push your branch and open a pull request.
