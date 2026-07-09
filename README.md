@@ -1,37 +1,56 @@
-# Project Title 🚀
+# Test Copilot 🚀
 
-Basic project description goes here.
+A lightweight sandbox repository for experimenting with GitHub Copilot tasks and simple scripts.
 
-## Setup Instructions
+## 📌 Overview
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/pallaviraiturkar0/test-copilot.git
-   ```
+This repository contains small sample scripts and markdown documents used for testing, demonstrations, and workflow practice.
 
-2. Navigate to the project directory:
-   ```
-   cd test-copilot
-   ```
+## 🛠️ Getting Started
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+### 1) Clone the repository
 
-## Contribution Guidelines
+```bash
+git clone https://github.com/pallaviraiturkar0/test-copilot.git
+```
+
+### 2) Move into the project folder
+
+```bash
+cd test-copilot
+```
+
+### 3) Install dependencies (if needed)
+
+```bash
+npm install
+```
+
+## 🤝 Contributing
+
+Contributions are welcome.
 
 1. Fork the repository.
-2. Create a new branch for your feature or fix:
+2. Create a feature or fix branch:
+
+   ```bash
+   git checkout -b feature/your-feature-name
    ```
-   git checkout -b feature/YourFeature
-   ```
+
 3. Commit your changes:
+
+   ```bash
+   git commit -m "Describe your change"
    ```
-   git commit -m "Add your message"
+
+4. Push your branch:
+
+   ```bash
+   git push origin feature/your-feature-name
    ```
-4. Push to the branch:
-   ```
-   git push origin feature/YourFeature
-   ```
-5. Create a pull request.
+
+5. Open a pull request.
+
+---
+
+If you find this useful, feel free to ⭐ the repository.
