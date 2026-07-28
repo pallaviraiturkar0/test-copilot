@@ -22,7 +22,7 @@ def primes_up_to(limit: int) -> list[int]:
     """
     if limit < 2:
         return []
-    sieve = bytearray([1]) * (limit + 1)
+    sieve = bytearray([1] * (limit + 1))
     sieve[0] = sieve[1] = 0
     for i in range(2, int(limit**0.5) + 1):
         if sieve[i]:
