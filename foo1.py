@@ -16,8 +16,18 @@ def is_prime(n: int) -> bool:
 
 
 def primes_up_to(limit: int) -> list[int]:
-    """Return a list of all prime numbers up to and including limit."""
-    return [n for n in range(2, limit + 1) if is_prime(n)]
+    """Return a list of all prime numbers up to and including limit.
+
+    Uses the Sieve of Eratosthenes for efficient computation.
+    """
+    if limit < 2:
+        return []
+    sieve = bytearray([1]) * (limit + 1)
+    sieve[0] = sieve[1] = 0
+    for i in range(2, int(limit**0.5) + 1):
+        if sieve[i]:
+            sieve[i * i :: i] = bytearray(len(sieve[i * i :: i]))
+    return [i for i, v in enumerate(sieve) if v]
 
 
 def factorial(n: int) -> int:
