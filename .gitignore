@@ -1,0 +1,64 @@
+# OSX
+#
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# React Native
+#
+.expo/
+.expo-shared/
+ios/Pods/
+ios/build/
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+
+# Build artifacts
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+dist/
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Bundle artifacts
+*.jsbundle
+
+# CocoaPods
+ios/Pods/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Tests
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
