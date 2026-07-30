@@ -1,6 +1,23 @@
-# Project Title 🚀
+# Flappy Bird Clone 🎮
 
-Basic project description goes here.
+A browser-based Flappy Bird clone with responsive controls and smooth gameplay.
+
+## Game Features
+
+- Smooth 60 FPS game loop
+- Keyboard controls (Spacebar to jump)
+- Touch controls for mobile devices
+- Start/restart functionality
+- Score tracking
+- Responsive design for desktop and mobile browsers
+
+## How to Play
+
+1. Open `index.html` in your web browser
+2. Press SPACEBAR or click the "Start Game" button to begin
+3. Press SPACEBAR or tap the screen to make the bird jump
+4. Avoid the pipes and the ground
+5. Try to get the highest score!
 
 ## Setup Instructions
 
@@ -14,10 +31,7 @@ Basic project description goes here.
    cd test-copilot
    ```
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+3. Open `index.html` in your web browser - no installation required!
 
 ## Contribution Guidelines
 
