@@ -19,6 +19,28 @@ Basic project description goes here.
    npm install
    ```
 
+## Running the Hello World Service
+
+To start the Hello World HTTP service:
+
+```bash
+python3 hello_world_service.py
+```
+
+The service will run on `http://localhost:8000` by default. You can specify a custom port:
+
+```bash
+python3 hello_world_service.py 3000
+```
+
+Test the service by visiting `http://localhost:8000` in your browser or using curl:
+
+```bash
+curl http://localhost:8000
+```
+
+Press `Ctrl+C` to stop the service.
+
 ## Contribution Guidelines
 
 1. Fork the repository.
