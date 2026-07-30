@@ -1,0 +1,35 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flappy Bird</h1>
+        <div id="score-display">Score: <span id="score">0</span></div>
+    </header>
+    <main>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-over-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>Game Over</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <p>High Score: <span id="high-score">0</span></p>
+                <button id="restart-btn">Play Again</button>
+                <p class="hint">Press Space, Click, or Tap to restart</p>
+            </div>
+        </div>
+        <div id="start-overlay">
+            <div class="overlay-content">
+                <h2>Flappy Bird</h2>
+                <p>Press Space, Click, or Tap to start</p>
+            </div>
+        </div>
+    </main>
+    <script src="src/main.js"></script>
+</body>
+</html>
