@@ -1,0 +1,72 @@
+.start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.start-content {
+  text-align: center;
+}
+
+.game-title {
+  font-size: 64px;
+  color: white;
+  margin: 0 0 30px 0;
+  text-shadow: 4px 4px 0 #000,
+               -2px -2px 0 #000,
+               2px -2px 0 #000,
+               -2px 2px 0 #000,
+               2px 2px 0 #000;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.instructions {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.instructions p {
+  margin: 10px 0;
+}
+
+.start-button {
+  padding: 15px 40px;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.start-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}

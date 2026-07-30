@@ -1,0 +1,29 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+  padding: 20px;
+}
+
+.game-board {
+  position: relative;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 50%, #F0E68C 100%);
+  border: 4px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.game-board::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, transparent 0%, #8B4513 40%, #654321 100%);
+  z-index: 1;
+}

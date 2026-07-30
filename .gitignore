@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+flappy-bird-game/node_modules/
+
+# Build outputs
+dist/
+build/
+flappy-bird-game/dist/
+flappy-bird-game/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
