@@ -9,6 +9,8 @@ def is_prime(n: int) -> bool:
         return True
     if n % 2 == 0:
         return False
+    # Only odd divisors up to sqrt(n) can divide n; a larger factor would
+    # necessarily pair with a smaller one already tested.
     for divisor in range(3, int(n**0.5) + 1, 2):
         if n % divisor == 0:
             return False
@@ -22,10 +24,13 @@ def primes_up_to(limit: int) -> list[int]:
     """
     if limit < 2:
         return []
+    # bytearray uses one byte per entry, far less memory than a list of bools.
     sieve = bytearray([1] * (limit + 1))
     sieve[0] = sieve[1] = 0
     for i in range(2, int(limit**0.5) + 1):
         if sieve[i]:
+            # Multiples below i*i were already cleared by smaller primes.
+            # Assigning a zero-filled slice clears them in one C-level step.
             sieve[i * i :: i] = bytearray(len(sieve[i * i :: i]))
     return [i for i, v in enumerate(sieve) if v]
 
@@ -34,6 +39,8 @@ def factorial(n: int) -> int:
     """Return the factorial of a non-negative integer n."""
     if n < 0:
         raise ValueError("factorial is not defined for negative numbers")
+    # Iterative rather than recursive to avoid hitting the recursion limit.
+    # Starts at 1 so that 0! and 1! both correctly return 1.
     result = 1
     for factor in range(2, n + 1):
         result *= factor
