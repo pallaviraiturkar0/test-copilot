@@ -1,6 +1,6 @@
-# Project Title 🚀
+# GitHub Copilot Sandbox
 
-Basic project description goes here.
+A lightweight Python project for testing and exploring GitHub Copilot features through small, dependency-free example scripts and utilities.
 
 ## Setup Instructions
 
