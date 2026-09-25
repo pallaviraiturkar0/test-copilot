@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="A fun Flappy Bird clone with smooth animations and great UX">
+    <meta name="theme-color" content="#70c5ce">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Start Screen Overlay -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-content">
+                <h1>🐦 Flappy Bird</h1>
+                <p class="hint">Tap or Press Space to Flap!</p>
+                <button id="start-btn" class="game-btn">Start Game</button>
+            </div>
+        </div>
+        
+        <!-- Game Over Overlay -->
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>Game Over</h2>
+                <div id="final-score">Score: 0</div>
+                <div id="high-score-display">Best: 0</div>
+                <div id="new-high-score" class="hidden">🎉 New High Score! 🎉</div>
+                <button id="restart-btn" class="game-btn">Play Again</button>
+                <button id="share-btn" class="game-btn secondary">Share Score</button>
+            </div>
+        </div>
+        
+        <!-- UI Elements -->
+        <div id="score-display">0</div>
+        <button id="sound-toggle" class="icon-btn" title="Toggle Sound">🔊</button>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
