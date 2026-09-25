@@ -2,6 +2,11 @@
 
 Basic project description goes here.
 
+## Features
+
+### AI News Fetcher
+Fetch and display the latest AI news from various sources. The script provides a formatted output and can optionally save results to JSON.
+
 ## Setup Instructions
 
 1. Clone the repository:
@@ -18,6 +23,19 @@ Basic project description goes here.
    ```
    npm install
    ```
+
+## Usage
+
+### Fetch AI News
+Run the AI news fetcher script:
+```bash
+python3 fetch_ai_news.py
+```
+
+To save the results to a JSON file:
+```bash
+python3 fetch_ai_news.py --save
+```
 
 ## Contribution Guidelines
 
