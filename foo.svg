@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img" aria-labelledby="title desc">
+  <title id="title">Robot joke illustration</title>
+  <desc id="desc">A smiling blue robot holds a white sign reading 404: Joke not found.</desc>
+  <rect width="480" height="260" rx="20" fill="#e8f4ff"/>
+  <line x1="120" y1="54" x2="120" y2="33" stroke="#24466b" stroke-width="6"/>
+  <circle cx="120" cy="28" r="8" fill="#ffbc42"/>
+  <rect x="56" y="55" width="128" height="122" rx="22" fill="#68b8e8" stroke="#24466b" stroke-width="5"/>
+  <circle cx="92" cy="107" r="10" fill="#24466b"/>
+  <circle cx="148" cy="107" r="10" fill="#24466b"/>
+  <path d="M90 137 Q120 162 150 137" fill="none" stroke="#24466b" stroke-width="5" stroke-linecap="round"/>
+  <rect x="19" y="94" width="32" height="48" rx="12" fill="#68b8e8" stroke="#24466b" stroke-width="5"/>
+  <rect x="189" y="94" width="32" height="48" rx="12" fill="#68b8e8" stroke="#24466b" stroke-width="5"/>
+  <rect x="74" y="183" width="25" height="36" rx="8" fill="#24466b"/>
+  <rect x="141" y="183" width="25" height="36" rx="8" fill="#24466b"/>
+  <rect x="210" y="66" width="244" height="128" rx="14" fill="#fff" stroke="#24466b" stroke-width="5"/>
+  <text x="332" y="117" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#24466b">404</text>
+  <text x="332" y="157" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#24466b">Joke not found</text>
+</svg>
