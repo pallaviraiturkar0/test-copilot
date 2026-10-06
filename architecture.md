@@ -35,10 +35,10 @@ def sort_numbers_descending(numbers: list) -> list
 ## Language & Dependencies
 
 - **Language:** Python 3
-- **Dependencies:** None (standard library only)
+- **Dependencies:** Matplotlib (for `bar_chart.py`)
 
 ## Design Principles
 
 - **Simplicity:** Scripts are kept minimal to focus on Copilot feature exploration.
-- **No external dependencies:** All code relies solely on Python's standard library.
+- **Minimal dependencies:** External libraries are used only where needed.
 - **Single responsibility:** Each script focuses on one clearly defined task.
