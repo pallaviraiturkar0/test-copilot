@@ -1,0 +1,18 @@
+OUTSIDE CLUB
+
+A responsive, dependency-free demo website.
+
+Open index.html in a modern browser to view the site.
+Alternatively, run python3 -m http.server 8000 from this directory
+and visit http://localhost:8000. Stop the server with Ctrl+C.
+
+Files:
+  index.html   - Page content and accessible navigation.
+  styles.css   - Responsive layout and CSS landscape illustration.
+  script.js    - Random adventure suggestions without consecutive repeats.
+  favicon.svg  - Local mountain icon.
+  website.txt  - This guide.
+
+Edit the adventures array in script.js to customize the suggestions.
+The main content remains available when JavaScript is disabled.
+No external fonts, images, services, or build steps are required.
