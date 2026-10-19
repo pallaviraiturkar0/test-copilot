@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find your next creative project with Launchpad's collection of small, practical ideas.">
+    <title>Launchpad | Make something new</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="projects.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="Launchpad home"><span class="brand-mark" aria-hidden="true">L.</span> Launchpad</a>
+      <a class="header-link" href="#projects">Explore ideas <span aria-hidden="true">&rarr;</span></a>
+    </header>
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">SMALL IDEAS. REAL POSSIBILITIES.</p>
+        <h1 id="hero-title">Your next great thing<br>starts <span>right here.</span></h1>
+        <p class="hero-description">Less scrolling, more creating. Discover a little inspiration for your next weekend project.</p>
+        <a class="primary-link" href="#projects">Find your next project <span aria-hidden="true">&darr;</span></a>
+        <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> A little curiosity goes a long way.</div>
+      </section>
+      <section class="project-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE IDEA BOARD</p><h2 id="projects-title">Made for your next free afternoon.</h2></div>
+          <label class="search-label" for="search">Search projects<input id="search" type="search" placeholder="Try &quot;journal&quot; or &quot;design&quot;" maxlength="100"></label>
+        </div>
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="Filter projects by category">
+            <button class="filter active" type="button" data-category="all" aria-pressed="true">All ideas</button>
+            <button class="filter" type="button" data-category="Code" aria-pressed="false">Code</button>
+            <button class="filter" type="button" data-category="Design" aria-pressed="false">Design</button>
+            <button class="filter" type="button" data-category="Everyday" aria-pressed="false">Everyday</button>
+          </div>
+          <button id="saved-filter" class="saved-filter" type="button" aria-pressed="false">Saved (<span id="saved-count">0</span>)</button>
+        </div>
+        <p id="results-status" class="results-status" role="status" aria-live="polite"></p>
+        <div id="project-grid" class="project-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>No ideas here just yet.</h3>
+          <p>Try another search or reset your filters to find a fresh starting point.</p>
+          <button id="reset-filters" class="primary-link" type="button">Show all ideas</button>
+        </div>
+        <p class="session-note">Saved ideas stay available while this page is open. Refreshing starts a fresh collection.</p>
+        <noscript><p>Enable JavaScript to browse, search, and save project ideas.</p></noscript>
+      </section>
+    </main>
+    <footer class="container site-footer"><span class="brand">Launchpad.</span><span>A place for small beginnings.</span></footer>
+  </body>
+</html>

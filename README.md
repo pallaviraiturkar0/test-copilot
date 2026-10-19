@@ -2,6 +2,16 @@
 
 Basic project description goes here.
 
+## Launchpad website
+
+Open `index.html` in a browser to explore a responsive project idea board. No
+dependencies or build step are required. Search ideas, filter by category, and
+save favorites for the current page session.
+
+The website consists of five files: `index.html`, `styles.css`, `data.js`
+(project content), `projects.js` (filtering and saved-idea logic), and `app.js`
+(rendering and event handling).
+
 ## Setup Instructions
 
 1. Clone the repository:
