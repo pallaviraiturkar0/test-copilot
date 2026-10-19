@@ -1,0 +1,60 @@
+"use strict";
+
+window.Launchpad = {
+  projects: [
+    {
+      id: "weather",
+      title: "A window to the weather",
+      category: "Code",
+      description: "Build a tiny weather dashboard. Start with your city, a forecast, and a little personality.",
+      duration: "An afternoon",
+      symbol: "{ }",
+      color: "mint",
+    },
+    {
+      id: "postcards",
+      title: "Greetings from anywhere",
+      category: "Design",
+      description: "Turn a favorite place into a postcard with bold type, simple shapes, and your own perspective.",
+      duration: "1-2 hours",
+      symbol: "Aa",
+      color: "peach",
+    },
+    {
+      id: "journal",
+      title: "A little room to reflect",
+      category: "Everyday",
+      description: "Create a five-minute journal ritual with three prompts: a highlight, a lesson, and a small hope.",
+      duration: "30 minutes",
+      symbol: "...",
+      color: "lavender",
+    },
+    {
+      id: "playlist",
+      title: "Give your playlist a home",
+      category: "Code",
+      description: "Make a page for your favorite tracks. Add cover art, listening notes, and links to the music.",
+      duration: "An afternoon",
+      symbol: "|||",
+      color: "blue",
+    },
+    {
+      id: "palette",
+      title: "Find color in the ordinary",
+      category: "Design",
+      description: "Pick a photo from your day and turn its colors into a palette for your next creative project.",
+      duration: "1 hour",
+      symbol: "Oo",
+      color: "yellow",
+    },
+    {
+      id: "recipes",
+      title: "Your very own recipe book",
+      category: "Everyday",
+      description: "Collect three meals you love. Write down the steps, the shortcuts, and what makes them yours.",
+      duration: "1-2 hours",
+      symbol: "1/2",
+      color: "rose",
+    },
+  ],
+};
