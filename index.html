@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Small ideas for your next big adventure. Explore the outdoors with Outside Club.">
+    <title>Outside Club | Make room for adventure</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Outside Club home">
+        <img src="favicon.svg" width="36" height="36" alt="">
+        Outside Club
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#ideas">Explore ideas</a>
+        <a class="button button-small" href="#start">Get outside</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Less scrolling. More exploring.</p>
+          <h1 id="hero-title">A little fresh air.<br>A whole new outlook.</h1>
+          <p class="intro">You don't need a plane ticket or a perfect plan. Your next adventure could be just around the corner.</p>
+          <a class="button" href="#ideas">Find your next adventure <span aria-hidden="true">&rarr;</span></a>
+          <p class="hero-note">Start small. Wander often.</p>
+        </div>
+        <div class="landscape" role="img" aria-label="An illustrated sunset over green mountains">
+          <div class="sun"></div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-front"></div>
+          <span class="landscape-caption">A change of scenery changes everything.</span>
+        </div>
+      </section>
+
+      <section class="ideas section" id="ideas" aria-labelledby="ideas-title">
+        <p class="eyebrow">Your weekend, reimagined</p>
+        <h2 id="ideas-title">Good things happen outside.</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01 / Slow down</span>
+            <h3>Take the scenic route</h3>
+            <p>Pick a nearby trail, leave your headphones behind, and see what you notice along the way.</p>
+            <span class="tag">One hour is enough</span>
+          </article>
+          <article class="card">
+            <span class="card-number">02 / Bring a friend</span>
+            <h3>Make lunch a picnic</h3>
+            <p>A blanket, something delicious, and a patch of grass. Sometimes the simplest plans are the best.</p>
+            <span class="tag">Better together</span>
+          </article>
+          <article class="card">
+            <span class="card-number">03 / Look up</span>
+            <h3>Catch the golden hour</h3>
+            <p>Find a safe spot with a view and watch the sky put on a show. No reservations required.</p>
+            <span class="tag">A free front-row seat</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="callout section" id="start" aria-labelledby="start-title">
+        <div>
+          <p class="eyebrow">No overthinking required</p>
+          <h2 id="start-title">Let a little spontaneity in.</h2>
+          <p id="adventure" role="status" aria-live="polite">Need a nudge? Get a simple idea for your next outing.</p>
+        </div>
+        <button class="button" id="suggest-adventure" type="button" hidden>Pick an adventure</button>
+        <noscript><p>Try a walk around your neighborhood and look for a street you've never explored.</p></noscript>
+      </section>
+    </main>
+
+    <footer>
+      <span class="brand">Outside Club</span>
+      <p>A small reminder to enjoy the world around you.</p>
+      <a href="#main">Back to top &uarr;</a>
+    </footer>
+  </body>
+</html>
