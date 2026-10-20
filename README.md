@@ -1,6 +1,6 @@
-# Project Title 🚀
+# test-copilot 🚀
 
-Basic project description goes here.
+A small sandbox of Python and Node.js examples for experimenting with GitHub Copilot.
 
 ## Setup Instructions
 
