@@ -2,6 +2,10 @@
 
 Basic project description goes here.
 
+## Repository purpose
+
+This repository is a sandbox for exploring Copilot workflows through small code examples.
+
 ## Setup Instructions
 
 1. Clone the repository:
